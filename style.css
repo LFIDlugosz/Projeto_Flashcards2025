@@ -59,6 +59,8 @@ main {
   margin-bottom: 2.5rem;
   z-index: auto !important;
   overflow: visible !important;
+  position: relative;
+  min-height: 300px;
 }
 
 .flashcard {
@@ -411,6 +413,36 @@ footer a {
 }
 .menu-flashcard-popup button:hover {
   background: var(--cor-secundaria);
+}
+
+/* Botão central de adicionar flashcard quando não houver nenhum na seção */
+#btn-central-add-flashcard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 220px;
+  min-height: 56px;
+  font-size: 1.2rem;
+  background: var(--cor-primaria);
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  box-shadow: 0 2px 8px rgba(46,41,78,0.10);
+  cursor: pointer;
+  font-family: var(--fonte-titulo);
+  z-index: 10;
+}
+#mensagem-adicao-menu {
+  display: block;
+  text-align: center;
+  margin: 2rem auto 0 auto;
+  color: var(--cor-primaria);
+  font-size: 1.1rem;
+  font-family: var(--fonte-texto);
 }
 
 @media (max-width: 600px) {

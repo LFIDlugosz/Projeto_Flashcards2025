@@ -203,6 +203,18 @@ function renderizarSecoesBar() {
   bar.appendChild(btnAddSecao);
 }
 
+// Evento do botão central de adicionar flashcard
+const btnCentralAdd = document.getElementById('btn-central-add-flashcard');
+if (btnCentralAdd) {
+  btnCentralAdd.onclick = () => {
+    secaoAddFlashcard.style.display = 'block';
+    btnMostrarForm.style.display = 'none';
+    form.onsubmit = defaultFormSubmit;
+    document.querySelector('#add-flashcard-section h2').textContent = 'Adicionar nova curiosidade';
+    secaoAddFlashcard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+}
+
 function renderizarSelecaoSecao() {
   const select = document.getElementById('selecao-secao');
   select.innerHTML = '';
@@ -219,6 +231,34 @@ function renderizarFlashcards() {
   const container = document.getElementById('flashcards-container');
   container.innerHTML = '';
   const cardsSecao = flashcards.filter(card => card.secao === secaoAtual);
+
+  // Mensagem de orientação
+  const msgMenu = document.getElementById('mensagem-adicao-menu');
+  if (cardsSecao.length === 0) {
+    msgMenu.style.display = 'none';
+  } else {
+    msgMenu.style.display = 'block';
+    msgMenu.textContent = 'Agora, para adicionar novos flashcards, utilize o menu ⋮ de cada cartão.';
+  }
+
+  // Botão central: só aparece se não houver nenhum flashcard
+  let btnCentral = document.createElement('button');
+  btnCentral.id = 'btn-central-add-flashcard';
+  btnCentral.setAttribute('aria-label', 'Adicionar flashcard. Nenhum flashcard nesta seção.');
+  btnCentral.textContent = 'Adicionar Flashcard';
+  btnCentral.style.display = cardsSecao.length === 0 ? 'flex' : 'none';
+  btnCentral.disabled = !(cardsSecao.length === 0);
+  btnCentral.onclick = () => {
+    secaoAddFlashcard.style.display = 'block';
+    btnMostrarForm.style.display = 'none';
+    form.onsubmit = defaultFormSubmit;
+    document.querySelector('#add-flashcard-section h2').textContent = 'Adicionar nova curiosidade';
+    secaoAddFlashcard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+  if (cardsSecao.length === 0) {
+    container.appendChild(btnCentral);
+  }
+
   cardsSecao.forEach((card, idx) => {
     const cardDiv = document.createElement('div');
     cardDiv.className = 'flashcard';
@@ -380,6 +420,8 @@ const secaoAddFlashcard = document.getElementById('add-flashcard-section');
 btnMostrarForm.onclick = () => {
   secaoAddFlashcard.style.display = 'block';
   btnMostrarForm.style.display = 'none';
+  form.onsubmit = defaultFormSubmit;
+  document.querySelector('#add-flashcard-section h2').textContent = 'Adicionar nova curiosidade';
   secaoAddFlashcard.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
@@ -403,4 +445,13 @@ function removerFlashcard(idx) {
     salvarFlashcards(flashcards);
     renderizarFlashcards();
   }
+}
+
+function getBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+    reader.readAsDataURL(file);
+  });
 }
