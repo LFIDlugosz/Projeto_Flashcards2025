@@ -1,4 +1,4 @@
-// Curiosidades iniciais (mínimo 9)
+// Curiosidades iniciais (padrão)
 const curiosidadesIniciais = [
   // Animais
   { pergunta: 'Qual o animal mais rápido do mundo?', resposta: 'O falcão-peregrino, que pode atingir 320 km/h em mergulho.', secao: 'Animais' },
@@ -20,7 +20,7 @@ const curiosidadesIniciais = [
   { pergunta: 'Qual o menor país?', resposta: 'Vaticano.', secao: 'Nosso Planeta' },
   { pergunta: 'Qual o maior arquipélago?', resposta: 'Indonésia.', secao: 'Nosso Planeta' },
   { pergunta: 'Qual o ponto mais baixo da Terra?', resposta: 'Fossa das Marianas.', secao: 'Nosso Planeta' },
-  // Espaço (9 flashcards)
+  // Espaço 
   { pergunta: 'Qual o maior planeta do Sistema Solar?', resposta: 'Júpiter.', secao: 'Espaço' },
   { pergunta: 'Qual planeta é conhecido como planeta vermelho?', resposta: 'Marte.', secao: 'Espaço' },
   { pergunta: 'Qual a estrela mais próxima da Terra?', resposta: 'O Sol.', secao: 'Espaço' },
