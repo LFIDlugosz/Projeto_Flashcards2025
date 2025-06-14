@@ -10,16 +10,16 @@ const curiosidadesIniciais = [
   { pergunta: 'Qual o animal mais antigo?', resposta: 'A água-viva Turritopsis dohrnii, considerada imortal.', secao: 'Animais' },
   { pergunta: 'Qual o animal mais barulhento?', resposta: 'A baleia-azul.', secao: 'Animais' },
   { pergunta: 'Qual o animal mais dorminhoco?', resposta: 'O coala, dorme até 22 horas por dia.', secao: 'Animais' },
-  // Planeta
-  { pergunta: 'Qual o maior oceano do planeta?', resposta: 'Oceano Pacífico.', secao: 'Planeta' },
-  { pergunta: 'Qual o maior deserto do mundo?', resposta: 'A Antártida.', secao: 'Planeta' },
-  { pergunta: 'Qual o rio mais extenso?', resposta: 'O rio Amazonas.', secao: 'Planeta' },
-  { pergunta: 'Qual a montanha mais alta?', resposta: 'Monte Everest.', secao: 'Planeta' },
-  { pergunta: 'Qual o país com mais ilhas?', resposta: 'Suécia, com mais de 267 mil ilhas.', secao: 'Planeta' },
-  { pergunta: 'Qual o lago mais profundo?', resposta: 'Lago Baikal, na Rússia.', secao: 'Planeta' },
-  { pergunta: 'Qual o menor país?', resposta: 'Vaticano.', secao: 'Planeta' },
-  { pergunta: 'Qual o maior arquipélago?', resposta: 'Indonésia.', secao: 'Planeta' },
-  { pergunta: 'Qual o ponto mais baixo da Terra?', resposta: 'Fossa das Marianas.', secao: 'Planeta' },
+  // Nosso Planeta
+  { pergunta: 'Qual o maior oceano do planeta?', resposta: 'Oceano Pacífico.', secao: 'Nosso Planeta' },
+  { pergunta: 'Qual o maior deserto do mundo?', resposta: 'A Antártida.', secao: 'Nosso Planeta' },
+  { pergunta: 'Qual o rio mais extenso?', resposta: 'O rio Amazonas.', secao: 'Nosso Planeta' },
+  { pergunta: 'Qual a montanha mais alta?', resposta: 'Monte Everest.', secao: 'Nosso Planeta' },
+  { pergunta: 'Qual o país com mais ilhas?', resposta: 'Suécia, com mais de 267 mil ilhas.', secao: 'Nosso Planeta' },
+  { pergunta: 'Qual o lago mais profundo?', resposta: 'Lago Baikal, na Rússia.', secao: 'Nosso Planeta' },
+  { pergunta: 'Qual o menor país?', resposta: 'Vaticano.', secao: 'Nosso Planeta' },
+  { pergunta: 'Qual o maior arquipélago?', resposta: 'Indonésia.', secao: 'Nosso Planeta' },
+  { pergunta: 'Qual o ponto mais baixo da Terra?', resposta: 'Fossa das Marianas.', secao: 'Nosso Planeta' },
   // Espaço (9 flashcards)
   { pergunta: 'Qual o maior planeta do Sistema Solar?', resposta: 'Júpiter.', secao: 'Espaço' },
   { pergunta: 'Qual planeta é conhecido como planeta vermelho?', resposta: 'Marte.', secao: 'Espaço' },
@@ -34,7 +34,7 @@ const curiosidadesIniciais = [
 
 const STORAGE_KEY = 'curiosidades_flashcards';
 const SECOES_KEY = 'curiosidades_secoes';
-let secoesPadrao = ['Animais', 'Planeta', 'Espaço'];
+let secoesPadrao = ['Animais', 'Nosso Planeta', 'Espaço'];
 
 function salvarFlashcards(flashcards) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(flashcards));
