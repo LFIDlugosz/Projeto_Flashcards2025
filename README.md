@@ -97,19 +97,3 @@ Sugere-se seguir fluxo de desenvolvimento com commits incrementais como:
 ## 📄 Licença
 Licenciado sob **Creative Commons Attribution‑NonCommercial‑ShareAlike 4.0 International (CC BY‑NC‑SA 4.0)**. Isso permite o uso acadêmico, com crédito ao autor, sem fins comerciais e sob a mesma licença.
 
-## 💡 Possíveis Melhorias
-- Exportação/importação de flashcards (JSON ou CSV)
-- Busca e filtro de flashcards
-- Temas customizáveis (dark/light)
-- Animações de flip mais avançadas
-- Suporte a áudio nos cartões
-- Integração com APIs de curiosidades
-- Modo estudo (quiz, revisão espaçada)
-- Atalhos de teclado para navegação
-- Tradução/multilíngue
-
-## 🤝 Contribuição
-Contribuições são bem-vindas! Abra uma issue ou envie um pull request.
-
-## 🌠 Curiosidade Extra
-O mascote do projeto foi criado em SVG para garantir leveza, escalabilidade e personalização, reforçando o tema espacial e a identidade visual do SpaceCards Curiosidades.
